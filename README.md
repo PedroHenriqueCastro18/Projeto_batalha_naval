@@ -5,7 +5,7 @@ Esse é um jogo desenvolvido na  linguagem C por alunos do segundo período da C
 
 
 ## Sobre o jogo:
-- 2 jogadores humanos
+- 2 jogadores 
 - Posicionamento manual ou automático das frotas
 - Sistema de tiros com acertos e afundamentos
 - Exibição do tabuleiro e mapa de tiros
@@ -28,29 +28,29 @@ rnd.h
 Makefile
 
 
-O projeto é modularizado, separando lógica de jogo, tabuleiro, frota, entrada do usuário e geração aleatória.
+O projeto é modularizado, separando lógica de jogo, tabuleiro, navios, entrada do usuário e geração aleatória.
 
 ---
 
-# ⚙️ Pré-requisitos
+# Pré-requisitos
 
 Para compilar e rodar o jogo no Windows, você precisa de:
 
-### ✔ GCC (compilador C)  
+### GCC (compilador C)  
 Recomendado:  
 - MinGW  
 ou  
 - MSYS2 (mais moderno)
 
-### ✔ Make (opcional, mas recomendado)
+### Make (opcional, mas recomendado)
 
 Se não quiser instalar o make, também é possível compilar usando apenas o gcc.
 
 ---
 
-# 🛠️ Como Compilar
+# Como Compilar
 
-## 👉 Opção 1 — Usando o Makefile
+## Opção 1 — Usando o Makefile
 
 No terminal, navegue até a pasta do projeto:
 
@@ -71,7 +71,7 @@ batalha.exe
 
 ---
 
-## 👉 Opção 2 — Compilar manualmente com GCC
+## Opção 2 — Compilar manualmente com GCC
 
 Se você não tiver make instalado, use:
 
@@ -80,7 +80,7 @@ gcc main.c game.c board.c fleet.c io.c rnd.c -o batalha.exe
 
 ---
 
-# ▶️ Como executar
+# Como executar
 
 No PowerShell ou terminal do VS Code escreva:
 
@@ -91,7 +91,7 @@ No PowerShell ou terminal do VS Code escreva:
 
 ---
 
-# ❗ Problema de acentuação no Windows
+# Problema de acentuação no Windows
 
 Se ao rodar o programa aparecerem caracteres estranhos (Ã, ┤, ▒, etc) digite isso no terminal:
 
@@ -102,7 +102,7 @@ Agora rode o jogo novamente.
 
 ---
 
-# 🎮 Como Jogar
+# Como Jogar
 
 1. Escolha “Novo jogo”
 2. Digite os apelidos dos jogadores
@@ -114,15 +114,15 @@ Agora rode o jogo novamente.
    - C10
    - J3
 5. O jogo valida entradas:
-   - ❌ Inválida → repete a jogada
-   - ❌ Coordenada já usada → repete a jogada
-   - ✔ Acertou → marca o navio
-   - ✔ Afundou → indica o navio destruído
+   - Inválida → repete a jogada
+   - Coordenada já usada → repete a jogada
+   - Acertou → marca o navio
+   - Afundou → indica o navio destruído
 6. O jogo termina quando todos os navios de um jogador forem afundados.
 
 ---
 
-# 🛳️ Frota Utilizada
+# Frota Utilizada
 
 | Navio         | Tamanho |
 |---------------|----------|
@@ -135,33 +135,12 @@ Agora rode o jogo novamente.
 
 ---
 
-# 👨‍💻 Tecnologias utilizadas
+# Equipe
 
-- Linguagem C (básico)
-- Ponteiros
-- Structs
-- Múltiplos arquivos .c
-- Modularização
-- Alocação dinâmica (malloc, realloc, free)
-- Validação de entrada
-- Alternância de turnos
+Desenvolvido por **Pedro Henrique Araújo de Castro**, **Paulo Henrique Thompson** e **Daniel Procópio**  
 
----
 
-# 📌 Observações
 
-- O jogo não possui inteligência artificial — é 2 jogadores no mesmo PC.
-- Mantém estilo simples para facilitar o aprendizado.
-- Apenas bibliotecas padrão da linguagem C são usadas.
 
----
 
-# 📬 Contato
-
-Desenvolvido por **Pedro Henrique Araújo de Castro**  
-Ideal para estudos e demonstrações de lógica de programação em C.
-
----
-
-# 🎉 Bom jogo!
 
