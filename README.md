@@ -137,7 +137,7 @@ Agora rode o jogo novamente.
 
 # Equipe
 
-Desenvolvido por **Pedro Henrique Araújo de Castro**, **Paulo Henrique Thompson** e **Daniel Procópio**  
+Desenvolvido por **Pedro Henrique Araújo de Castro**, **Paulo Henrique Thompson** e **Daniel de Araujo Procópio da Cunha**  
 
 
 
