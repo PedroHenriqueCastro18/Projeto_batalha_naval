@@ -32,121 +32,136 @@ O projeto é modularizado, separando lógica de jogo, tabuleiro, frota, entrada 
 
 ---
 
-# Como rodar o jogo em sua máquina:
+# ⚙️ Pré-requisitos
 
-### 1. Pré-requisitos
+Para compilar e rodar o jogo no Windows, você precisa de:
 
-Para compilar o projeto você precisa de:
+### ✔ GCC (compilador C)  
+Recomendado:  
+- MinGW  
+ou  
+- MSYS2 (mais moderno)
 
-GCC — Compilador C
+### ✔ Make (opcional, mas recomendado)
 
-Recomendados:
+Se não quiser instalar o make, também é possível compilar usando apenas o gcc.
 
-MinGW-w64
+---
 
-ou MSYS2 (mais moderno e mais estável)
+# 🛠️ Como Compilar
 
-Make (opcional, mas facilita muito)
+## 👉 Opção 1 — Usando o Makefile
 
-Se você não quiser instalar make, tudo funciona com apenas um comando usando o gcc.
-
-2. Baixe o Projeto
-
-Baixe/clone o repositório:
-
-git clone https://github.com/seu-usuario/batalha-naval-c.git
-
-
-Ou simplesmente faça download manual da pasta.
-
-🛠️ 3. Compilando o Projeto
-
-Existem duas maneiras de compilar:
-
-✔ Opção 1 — Usando o Makefile (Recomendado)
-
-Abra o terminal na pasta do projeto:
+No terminal, navegue até a pasta do projeto:
 
 cd caminho/para/Batalha_naval_em_C
 
-
-E execute:
+Execute:
 
 mingw32-make
 
-
-ou (dependendo da instalação):
+ou:
 
 make
 
-
-Isso gera o arquivo:
+Isso vai gerar o executável:
 
 batalha.exe
 
-✔ Opção 2 — Sem Makefile (Apenas GCC)
 
-Caso você não tenha o make, basta rodar este comando:
+---
+
+## 👉 Opção 2 — Compilar manualmente com GCC
+
+Se você não tiver make instalado, use:
 
 gcc main.c game.c board.c fleet.c io.c rnd.c -o batalha.exe
 
 
-Isso compila todo o jogo manualmente e cria o executável.
+---
 
-▶️ 4. Executando o Jogo
+# ▶️ Como executar
 
-No Windows PowerShell ou no terminal do VS Code:
+No PowerShell ou terminal do VS Code escreva:
 
 .\batalha.exe
 
 
-⚠️ O PowerShell não executa arquivos da pasta atual sem .\ na frente.
-Por isso o comando batalha.exe sozinho não funciona.
+**Importante:** o PowerShell exige usar `.\` para executar programas da pasta atual.
 
-❗ 5. Corrigindo Problemas de Acentuação
+---
 
-Se ao rodar o jogo aparecerem caracteres estranhos como:
+# ❗ Problema de acentuação no Windows
 
-Configura├º├Áes
-Coordenada inv├ílida
-├üGUA
-
-
-Então seu terminal está usando CP850 e não UTF-8.
-
-Antes de rodar o jogo, execute:
+Se ao rodar o programa aparecerem caracteres estranhos (Ã, ┤, ▒, etc) digite isso no terminal:
 
 chcp 65001
 
 
-Depois rode:
+Agora rode o jogo novamente.
 
-.\batalha.exe
+---
 
+# 🎮 Como Jogar
 
-Agora todos os acentos aparecerão corretamente.
+1. Escolha “Novo jogo”
+2. Digite os apelidos dos jogadores
+3. Escolha o tipo de posicionamento:
+   - A → Automático
+   - M → Manual
+4. Ataque digitando coordenadas como:
+   - B5
+   - C10
+   - J3
+5. O jogo valida entradas:
+   - ❌ Inválida → repete a jogada
+   - ❌ Coordenada já usada → repete a jogada
+   - ✔ Acertou → marca o navio
+   - ✔ Afundou → indica o navio destruído
+6. O jogo termina quando todos os navios de um jogador forem afundados.
 
-🎉 6. Pronto para jogar!
+---
 
-Depois de compilar e executar:
+# 🛳️ Frota Utilizada
 
-escolha Novo jogo
+| Navio         | Tamanho |
+|---------------|----------|
+| Porta-aviões  | 5        |
+| Encouraçado   | 4        |
+| Cruzador      | 3        |
+| Cruzador      | 3        |
+| Destroyer     | 2        |
+| Destroyer     | 2        |
 
-informe os apelidos
+---
 
-escolha posicionamento A (automático) ou M (manual)
+# 👨‍💻 Tecnologias utilizadas
 
-jogue digitando coordenadas como B5, C10, J3
+- Linguagem C (básico)
+- Ponteiros
+- Structs
+- Múltiplos arquivos .c
+- Modularização
+- Alocação dinâmica (malloc, realloc, free)
+- Validação de entrada
+- Alternância de turnos
 
-O jogo valida coordenadas:
+---
 
-❌ inválida → tenta novamente
+# 📌 Observações
 
-❌ repetida → tenta novamente
+- O jogo não possui inteligência artificial — é 2 jogadores no mesmo PC.
+- Mantém estilo simples para facilitar o aprendizado.
+- Apenas bibliotecas padrão da linguagem C são usadas.
 
-✔ válida → acerto ou água
+---
 
-E termina quando toda a frota de um jogador for afundada.
+# 📬 Contato
 
-🧩 7. Problemas Comuns e Soluções
+Desenvolvido por **Pedro Henrique Araújo de Castro**  
+Ideal para estudos e demonstrações de lógica de programação em C.
+
+---
+
+# 🎉 Bom jogo!
 
